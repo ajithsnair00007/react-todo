@@ -1,0 +1,54 @@
+[debug] [2023-03-20T20:41:20.949Z] ----------------------------------------------------------------------
+[debug] [2023-03-20T20:41:20.952Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-03-20T20:41:20.953Z] CLI Version:   11.24.1
+[debug] [2023-03-20T20:41:20.954Z] Platform:      win32
+[debug] [2023-03-20T20:41:20.954Z] Node Version:  v18.15.0
+[debug] [2023-03-20T20:41:20.955Z] Time:          Tue Mar 21 2023 02:11:20 GMT+0530 (India Standard Time)
+[debug] [2023-03-20T20:41:20.956Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-20T20:41:20.968Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-20T20:41:20.969Z] > authorizing via signed-in user (ajithsnair00007@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\user\Desktop\React\todo-mashup-react
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-03-20T20:42:30.144Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-03-20T20:42:30.145Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"react-todo123","name":"react-todo123"}
+[debug] [2023-03-20T20:42:32.545Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-03-20T20:42:32.546Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.4846380961440877353"}
+[debug] [2023-03-20T20:42:32.552Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4846380961440877353 [none]
+[debug] [2023-03-20T20:42:34.319Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4846380961440877353 200
+[debug] [2023-03-20T20:42:34.320Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4846380961440877353 {"name":"operations/cp.4846380961440877353"}
+[debug] [2023-03-20T20:42:34.824Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-03-20T20:42:34.826Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4846380961440877353 [none]
+[debug] [2023-03-20T20:42:36.602Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4846380961440877353 200
+[debug] [2023-03-20T20:42:36.603Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4846380961440877353 {"name":"operations/cp.4846380961440877353"}
+[debug] [2023-03-20T20:42:37.609Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-03-20T20:42:37.611Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4846380961440877353 [none]
+[debug] [2023-03-20T20:42:39.428Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4846380961440877353 200
+[debug] [2023-03-20T20:42:39.429Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4846380961440877353 {"name":"operations/cp.4846380961440877353","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2023-03-20T20:42:39.727Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\operation-poller.js:24:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createCloudProject (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:186:29)
+    at async createFirebaseProjectAndLog (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:45:9)
+    at async promptAndCreateNewProject (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:32:12)
+    at async doSetup (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+    at async init (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
